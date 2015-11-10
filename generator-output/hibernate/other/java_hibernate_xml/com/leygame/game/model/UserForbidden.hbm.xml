@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.leygame.game.model">
+    <class name="UserForbidden" table="t_user_forbidden">
+
+        <id name="id" column="id" type="java.lang.Integer">
+            <generator class="increment"/>
+        </id>
+		
+		
+		
+		<property 
+			name="operator" 
+			column="operator" 
+			update="true"
+            insert="true"
+            type="java.lang.String"
+			not-null="false" 
+			unique="false" 
+			length="20"/>
+		
+		<property 
+			name="forbiddenType" 
+			column="forbiddenType" 
+			update="true"
+            insert="true"
+            type="Integer"
+			not-null="false" 
+			unique="false" 
+			length="3"/>
+		
+		<property 
+			name="userAccount" 
+			column="userAccount" 
+			update="true"
+            insert="true"
+            type="java.lang.String"
+			not-null="false" 
+			unique="false" 
+			length="30"/>
+		
+		<property 
+			name="productId" 
+			column="productId" 
+			update="true"
+            insert="true"
+            type="java.lang.Integer"
+			not-null="false" 
+			unique="false" 
+			length="10"/>
+		
+		<property 
+			name="role" 
+			column="role" 
+			update="true"
+            insert="true"
+            type="java.lang.String"
+			not-null="false" 
+			unique="false" 
+			length="64"/>
+		
+		<property 
+			name="description" 
+			column="description" 
+			update="true"
+            insert="true"
+            type="java.lang.String"
+			not-null="false" 
+			unique="false" 
+			length="65535"/>
+		
+		<property 
+			name="addTime" 
+			column="add_time" 
+			update="true"
+            insert="true"
+            type="java.util.Date"
+			not-null="false" 
+			unique="false" 
+			length="0"/>
+		
+		<!-- One-To-Many attributes -->
+
+		<!-- Many-To-One attributes -->
+
+    </class>
+</hibernate-mapping>
+
